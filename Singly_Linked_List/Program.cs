@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,6 +80,18 @@ namespace Singly_Linked_List
                 Console.WriteLine(currentNode.rollNumber + "" + currentNode.name + "\n");
                 Console.WriteLine();
             }
+        }
+        public bool delNode(int nim)
+        {
+            Node previous, current;
+            previous = current = null;
+            //check if the spesified node is present in the list or not
+            if (Search(nim, ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
+            if (current == START)
+                START = START.next;
+            return true;
         }
     }
 }
