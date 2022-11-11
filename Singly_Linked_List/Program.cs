@@ -9,7 +9,7 @@ namespace Singly_Linked_List
     //each node consist of the information part and link to the next node
     class Node
     {
-        public int rollNumebr;
+        public int rollNumber;
         public string name;
         public Node next;
     }
@@ -29,12 +29,12 @@ namespace Singly_Linked_List
             Console.Write("\nEnter the name of the student : ");
             nm = Console.ReadLine();
             Node newnode = new Node();
-            newnode.rollNumebr = nim;
+            newnode.rollNumber = nim;
             newnode.name = nm;
             //if the node to be inserted is the first node
-            if (START == null || nim <= START.rollNumebr)
+            if (START == null || nim <= START.rollNumber)
             {
-                if ((START != null) && (nim == START.rollNumebr))
+                if ((START != null) && (nim == START.rollNumber))
                 {
                     Console.WriteLine("\nDuplicate roll numbers not allowed\n");
                     return;
@@ -49,9 +49,9 @@ namespace Singly_Linked_List
             previous = START;
             current = START;
 
-            while ((current != null) && (nim >= current.rollNumebr))
+            while ((current != null) && (nim >= current.rollNumber))
             {
-                if (nim == current.rollNumebr)
+                if (nim == current.rollNumber)
                 {
                     Console.WriteLine("\nDuplicate roll numbers not allowed\n");
                     return;
@@ -66,7 +66,19 @@ namespace Singly_Linked_List
         }
         public void traverse()
         {
-
+            if (ListEmpty())
+            {
+                Console.WriteLine("\nList is empt. \n");
+            }
+            else
+            {
+                Console.WriteLine("\nList record in the list are : ");
+                Node currentNode;
+                for (currentNode = START; currentNode != null; 
+                    currentNode = currentNode.next) ;
+                Console.WriteLine(currentNode.rollNumber + "" + currentNode.name + "\n");
+                Console.WriteLine();
+            }
         }
     }
 }
