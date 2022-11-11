@@ -43,6 +43,11 @@ namespace Singly_Linked_List
                 START = newnode;
                 return;
             }
+
+            // locate the position of the new node in the list
+            Node previous, current;
+            previous = START;
+            current = START;
         }
     }
 }
