@@ -48,6 +48,15 @@ namespace Singly_Linked_List
             Node previous, current;
             previous = START;
             current = START;
+
+            while ((current != null) && (nim >= current.rollNumebr))
+            {
+                if (nim == current.rollNumebr)
+                {
+                    Console.WriteLine("\nDuplicate roll numbers not allowed\n");
+                    return;
+                }
+            }
         }
     }
 }
