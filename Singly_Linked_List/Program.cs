@@ -56,6 +56,8 @@ namespace Singly_Linked_List
                     Console.WriteLine("\nDuplicate roll numbers not allowed\n");
                     return;
                 }
+                previous = current;
+                current = current.next;
             }
         }
     }
