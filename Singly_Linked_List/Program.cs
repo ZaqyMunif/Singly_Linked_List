@@ -119,6 +119,9 @@ namespace Singly_Linked_List
     }
     class program
     {
-
+        static void Main(string[] args)
+        {
+            
+        }
     }
 }
