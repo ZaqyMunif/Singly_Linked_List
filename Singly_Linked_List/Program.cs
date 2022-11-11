@@ -64,6 +64,9 @@ namespace Singly_Linked_List
             newnode.next = current;
             previous.next = newnode;
         }
+        public void traverse()
+        {
 
+        }
     }
 }
