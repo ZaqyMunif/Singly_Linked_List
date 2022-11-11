@@ -117,4 +117,8 @@ namespace Singly_Linked_List
                 return false;
         }
     }
+    class program
+    {
+
+    }
 }
