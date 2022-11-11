@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Singly_Linked_List
 {
-    internal class Program
+    //each node consist of the information part and link to the next node
+    class Node
     {
-        static void Main(string[] args)
-        {
-        }
+        public int rollNumebr;
+        public string name;
+        public Node next;
     }
+    
 }
